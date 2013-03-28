@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>bueno.comics</string>
+	<key>connections</key>
+	<dict>
+		<key>F09A51B6-B6D1-4DC2-B682-135A8507D3FD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7B74DE87-9AE4-4619-96EF-B90B6A515A2D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>F6B33E46-66D3-4011-912F-84D4C876188E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F913DE85-D315-46B5-B14F-8036414E90B6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DA01769A-CFF4-4BCD-A12D-13ACCF2BCDE7</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Send to Fantastical</string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Timothy Bueno</string>
+	<key>description</key>
+	<string>Get new comics</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Comics</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from alfredComics import fantastical
+
+fantastical("{query}")</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DA01769A-CFF4-4BCD-A12D-13ACCF2BCDE7</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from alfredComics import action
+
+action("{query}")</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F913DE85-D315-46B5-B14F-8036414E90B6</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>comics</string>
+				<key>runningsubtext</key>
+				<string>Please wait while comic information is collected</string>
+				<key>script</key>
+				<string>from alfredComics import get_comics
+
+q = "{query}"
+
+get_comics(q)</string>
+				<key>title</key>
+				<string>Get Comics</string>
+				<key>type</key>
+				<integer>3</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>F6B33E46-66D3-4011-912F-84D4C876188E</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>comiccache</string>
+				<key>subtext</key>
+				<string>Force the clearing of cache...</string>
+				<key>text</key>
+				<string>Clear Comic SQL Cache</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F09A51B6-B6D1-4DC2-B682-135A8507D3FD</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>from alfredComics import checkCache
+
+checkCache(True)</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>7B74DE87-9AE4-4619-96EF-B90B6A515A2D</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>7B74DE87-9AE4-4619-96EF-B90B6A515A2D</key>
+		<dict>
+			<key>ypos</key>
+			<real>380</real>
+		</dict>
+		<key>DA01769A-CFF4-4BCD-A12D-13ACCF2BCDE7</key>
+		<dict>
+			<key>ypos</key>
+			<real>200</real>
+		</dict>
+		<key>F09A51B6-B6D1-4DC2-B682-135A8507D3FD</key>
+		<dict>
+			<key>ypos</key>
+			<real>380</real>
+		</dict>
+		<key>F6B33E46-66D3-4011-912F-84D4C876188E</key>
+		<dict>
+			<key>ypos</key>
+			<real>80</real>
+		</dict>
+		<key>F913DE85-D315-46B5-B14F-8036414E90B6</key>
+		<dict>
+			<key>ypos</key>
+			<real>80</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>timbueno.com</string>
+</dict>
+</plist>
