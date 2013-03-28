@@ -7,7 +7,7 @@ Comics
 ======
 Collects comic book data from [PreviewsWorld](http://www.previewsworld.com). The current week and the following week's releases are collected and categorized. The workflow utilizes [alp](https://github.com/phyllisstein/alp) to facilitate the generation of Alfred Feedback data.
 
-![Next Weeks Comics](https://github.com/timbueno/BuenoAlfred/blob/master/Comics/Screenshots/comicsnext.png)
+https://github.com/timbueno/BuenoAlfred/blob/master/Comics/Screenshots/comicsnext.png
 
 The workflow also implements a rudimentary menu system by exploiting Alfred's autocomplete mechanism.
 
