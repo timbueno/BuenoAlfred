@@ -97,9 +97,9 @@ def get_comics(query=None):
 
         else:
             feedback = []
-            item = alp.Item(title='This weeks comics?', valid='False', autocomplete='this', icon=get_icon('FORWARD'))
+            item = alp.Item(title='This weeks comics?', valid=False, autocomplete='this', icon=get_icon('FORWARD'))
             feedback.append(item)
-            item = alp.Item(title='Next weeks comics?', valid='next', autocomplete='this', icon=get_icon('FORWARD'))
+            item = alp.Item(title='Next weeks comics?', valid=False, autocomplete='this', icon=get_icon('FORWARD'))
             feedback.append(item)
             return alp.feedback(feedback)
 

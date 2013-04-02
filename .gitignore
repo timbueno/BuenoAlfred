@@ -1,0 +1,4 @@
+*.pyc
+Comics/Source/debug.log
+Comics/Source/savedata/comicData
+Comics/Source/savedata/pageData
