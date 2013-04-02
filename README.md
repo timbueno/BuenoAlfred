@@ -13,5 +13,6 @@ Collects comic book data from [PreviewsWorld](http://www.previewsworld.com). The
 
 The workflow also implements a rudimentary menu system by exploiting Alfred's autocomplete mechanism.
 
+* Actioning on the calendar at the top of the list will switch you to next weeks comics.
 * Actioning on a specific comic book opens the PreviewsWorld webpage description.
 * Holding CMD while actioning on an item adds the selected comic book to Fantastical if it is installed.
